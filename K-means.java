@@ -1,6 +1,6 @@
 /* K-means clustering（K-平均法） */
 
-package 演習実験ⅲ;
+package 演習実験３;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -28,11 +28,11 @@ public class K-means {
 			double judge = 0.0;
 			String str = br.readLine();
 			int cluster[] = new int[Kj];//cluster num（クラスタ番号）
-			int K = 20;
+			int K = 20;//num of clusters（クラスタの数）
 			double sum[][];
 			double ave[][] = new double[K * 3][4];
 			int size[];//num of clusters（クラスタの数）
-			
+
 			for(int i = 0;i < 150;i++) {
 				String[] tmp = (str.split(" ", 0));
 				for(int j = 0;j < 5;j++) {
@@ -153,7 +153,7 @@ public class K-means {
 					judge = 2.0;
 				}else {
 					judge = 3.0;
-				}		
+				}
 				if(judge == test[i][4] ) {
 					correct++;
 				}
